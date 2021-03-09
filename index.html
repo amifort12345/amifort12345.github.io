@@ -71,15 +71,18 @@
 
     <script>
         var map = L.map('map', {
-            center: [53.897238, 27.443640], // Honolulu, HI
+            center: [21.3069, -157.8583], // Honolulu, HI
             zoom: 16
         });
 
-        var defaultBase = L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map);
+        var defaultBase = L.tileLayer.provider('Stamen.TonerLite').addTo(map);
 
         var baseLayers = {
-            'OpenStreetMap Mapnik': defaultBase,
-            'Stamen Toner': L.tileLayer.provider('Stamen.Toner'),
+            'Stamen Toner': defaultBase,
+            'USGS TNM': L.tileLayer.provider('USGSTNM'),
+            'ESRI Imagery': L.tileLayer.provider('Esri.WorldImagery'),
+            'ESRI Ocean Basemap': L.tileLayer.provider('Esri.OceanBasemap'),
+            'OSM Topo': L.tileLayer.provider('OpenTopoMap')
         };
 
         //ESRI ArcGIS layers from Hawaii GIS Program; dynamic layer example
@@ -173,7 +176,7 @@
             }
         };
 
-        add layer switch control
+        //add layer switch control
         L.control.groupedLayers(baseLayers, groupOverLays).addTo(map);
 
 
