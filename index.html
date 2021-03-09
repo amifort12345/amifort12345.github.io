@@ -75,14 +75,12 @@
             zoom: 16
         });
 
-        var defaultBase = L.tileLayer.provider('Stamen.TonerLite').addTo(map);
+        var defaultBase = L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map);
 
         var baseLayers = {
-            'Stamen Toner': defaultBase,
-            'USGS TNM': L.tileLayer.provider('USGSTNM'),
-            'ESRI Imagery': L.tileLayer.provider('Esri.WorldImagery'),
-            'ESRI Ocean Basemap': L.tileLayer.provider('Esri.OceanBasemap'),
-            'OSM Topo': L.tileLayer.provider('OpenTopoMap')
+            'Классическая': defaultBase,
+            'Со спутника': L.tileLayer.provider('Esri.WorldImagery'),
+            'Черно-белая': L.tileLayer.provider('Stamen.Toner')
         };
 
         //ESRI ArcGIS layers from Hawaii GIS Program; dynamic layer example
