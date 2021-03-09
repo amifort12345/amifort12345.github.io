@@ -154,27 +154,27 @@
         var VegShoreline = source.getLayer('PACIOOS:hi_hcgg_all_shore_veg');
 
         //Load OSM Buildings then disable it on first load; can only be viewed at certain scales
-        var osmb = new OSMBuildings(map).load();
-        map.removeLayer(osmb);
+    //    var osmb = new OSMBuildings(map).load();
+  //      map.removeLayer(osmb);
 
         //Overlay grouped layers    
-        var groupOverLays = {
-            "Hawaii State GIS": {
-                "Water Quality Monitoring Sites": WaterQualSites,
-                "Na Ala Hele Trails": Trails,
-                "Agricultural Baseline": AgBaseline
-            },
+       // var groupOverLays = {
+       //     "Hawaii State GIS": {
+        //        "Water Quality Monitoring Sites": WaterQualSites,
+        //        "Na Ala Hele Trails": Trails,
+        //        "Agricultural Baseline": AgBaseline
+       //     },
 
-            "PacIOOS Layers": {
-                "Economic Loss from Sea Level Rise (0.5ft) ": EconSeaLevRise,
-                "CRED REA Sites": CREDREASites,
-                "Vegetation Shoreline": VegShoreline
-            },
+        //    "PacIOOS Layers": {
+        //        "Economic Loss from Sea Level Rise (0.5ft) ": EconSeaLevRise,
+        //        "CRED REA Sites": CREDREASites,
+        //        "Vegetation Shoreline": VegShoreline
+        //    },
 
-            "OSM Bldg Classic": {
-                "2.5D Buildings": osmb
-            }
-        };
+         //   "OSM Bldg Classic": {
+         //       "2.5D Buildings": osmb
+   //         }
+    //    };
 
         //add layer switch control
         L.control.groupedLayers(baseLayers).addTo(map);
