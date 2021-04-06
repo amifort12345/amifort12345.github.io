@@ -119,7 +119,16 @@
       //          }
       //      }
      //   });
-
+        var cameraIcon = new L.Icon({
+          iconUrl: 'Images/c100.png',
+       //   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+      //    shadowSize: [41, 41]
+        });
+        
+        var marker = L.marker([53.8972, 27.4431], {icon: cameraIcon}).addTo(map);
         //add popup to AgBaseline feature layer
    //     AgBaseline.bindPopup(function(evt) {
      //       return L.Util.template('<p>{cropcatego}<br>{island}</p>', evt.feature.properties);
