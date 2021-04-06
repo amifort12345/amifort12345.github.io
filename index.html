@@ -145,7 +145,14 @@
  //               }
  //           }
 //        });
+L.rotatedMarker(53.89843, 27.43621], {
+  rotationAngle: 45,
+}).addTo(map);
 
+var marker = new L.RotatedMarker([53.89843, 27.43621], {
+  rotationAngle: 145,
+  rotationOrigin: "bottom center",
+}).addTo(map);
         //PacIOOS GeoServer Example; adding a single layer with properties
         //Using a relative url to call layer instead of http
 //        var EconSeaLevRise = L.tileLayer.wms('http://geo.pacioos.hawaii.edu/geoserver/wms?', {
